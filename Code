@@ -1,0 +1,100 @@
+package Operatori;
+
+import java.util.Scanner;
+
+public class ExercitiiInstructiuni {
+	public static void main(String[] args) {
+
+		/*
+		 * 1. Scrieti un program care sa citeasca 2 numere din consola si sa afiseze
+		 * daca sunt egale sau nu.
+		 */
+//		Scanner cititor = new Scanner(System.in);
+//		System.out.println("Introduceti primul numar: ");
+//		int numar1 = cititor.nextInt();
+//		System.out.println("Introduceti al doilea numar: ");
+//		int numar2 = cititor.nextInt();
+//		if (numar1 == numar2) {
+//			System.out.println("Numere introduse sunt egale!");
+//		} else {
+//			System.out.println("Numere introduse nu sunt egale!");
+//		}
+
+		/*
+		 * 2. Scrietri un program care sa citeasca un numar din consola si sa afiseze
+		 * daca este par sau impar.
+		 */
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Introduceti un numar");
+//		int numarIntrodus = sc.nextInt();
+//		if (numarIntrodus % 2 == 0) {
+//			System.out.println("Numarul introdus este par!");
+//		} else {
+//			System.out.println("Numarul introdus este impar!");
+//		}
+
+		/*
+		 * 3. Scrieti un program care sa citeasca un numar din consola si sa asfiseze
+		 * daca este pozitiv sau negativ.
+		 */
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Introduceti numarul: ");
+//		int numarIntrodus = sc.nextInt();
+//		if (numarIntrodus > 0) {
+//			System.out.println("Numarul introdus este pozitiv!");
+//		} else {
+//			System.out.println("Numarul introdus este negativ!");
+//		}
+
+		/*
+		 * 4.Creati o aplicatie care cere trei numere de la utilizator si il gaseste si
+		 * afiseaza pe cel mai mic dintre ele.
+		 */
+//		Scanner cititor = new Scanner(System.in);
+//		System.out.println("Introduceti primul numar: ");
+//		int n1 = cititor.nextInt();
+//		System.out.println("Introduceti al doilea numar: ");
+//		int n2 = cititor.nextInt();
+//		System.out.println("Introduceti al treilea numar: ");
+//		int n3 = cititor.nextInt();
+//
+//		int minim = n1;
+//		if (n2 < minim) {
+//			minim = n2;
+//		} else if (n3 < minim) {
+//			minim = n3;
+//		}
+//		System.out.println("Cel mai mic numar este: " + minim);
+
+		/*
+		 * 5. Scrieti un program care va cere sa introduceti varsta voastra si varsta
+		 * voastra ideala de pensionare. Sa se printeze unul din mesajeke
+		 * corespunzatoare: Mai aveti de lucrat unca X ani. Ati iesit deja la pensie. De
+		 * asemenea, varstele introduse trebuie sa fie valide.
+		 */
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduceti varsta la care doriti sa va pensionati: ");
+		int varstaIdeala = sc.nextInt();
+		System.out.println("Introduceti varsta voastra: ");
+		int varstaMea = sc.nextInt();
+
+		boolean dateleIntroduseSuntCorecte = true;
+
+		if (varstaMea <= 0 || varstaIdeala <= 0) {
+			System.out.println("Ai introdus varsta gresit!");
+			dateleIntroduseSuntCorecte = false;
+		}
+		if (varstaMea > 130 || varstaIdeala > 130) {
+			System.out.println("Ati introdus o varsta absurda!");
+			dateleIntroduseSuntCorecte = false;
+		}
+
+		if (dateleIntroduseSuntCorecte) {
+			if (varstaMea < varstaIdeala) {
+				System.out.println("Mai ai de lucrat inca " + (varstaIdeala - varstaMea) + " ani.");
+			} else {
+				System.out.println("Ai iesit deja la pensie!");
+			}
+		}
+	}
+}
